@@ -79,7 +79,36 @@
 *::after {
   box-sizing: border-box;
 }
-
+*{
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+.flex{
+  display: flex;
+}
+.centro{
+  align-items: center;
+  justify-content: center;
+}
+.ww100{
+  width: 100%;
+}
+.color-cabecera{
+  background-color: #f2eba0;
+}
+.imagen{
+  width: 150px;
+  height: 150px;
+}
+ul{
+  list-style: none;
+}
+li{
+  cursor: pointer;
+}
+ul a{
+  text-decoration: none;
+  color: black
+}
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
