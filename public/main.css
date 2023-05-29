@@ -107,8 +107,14 @@ li{
 }
 ul a{
   text-decoration: none;
-  color: black
+  color: black;
+  transition: 0.5s;
 }
+ul a:hover{
+  color: #f2eba0;
+  background-color: black;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
