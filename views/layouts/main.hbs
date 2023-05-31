@@ -11,6 +11,14 @@
     <title></title>
 </head>
 <body>
+    <div class="color-cabecera">
+    {{#if name}}
+    <a href="/logout">Logout</a>
+    {{else}}
+        <a href="/login">Login</a>
+        <a href="/registro">Register</a>
+    {{/if}}
+    </div>
     {{{body}}}
 </body>
 </html>

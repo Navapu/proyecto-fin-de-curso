@@ -5,6 +5,5 @@ CREATE TABLE newuser(
 	id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     usuario VARCHAR(50) NOT NULL,
     email VARCHAR(255) NOT NULL,
-    contrasena VARCHAR(255) NOT NULL,
-    recontrasena VARCHAR(255) NOT NULL
+    contrasena VARCHAR(255) NOT NULL
 );
