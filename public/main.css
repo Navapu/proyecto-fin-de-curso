@@ -93,7 +93,7 @@
   width: 100%;
 }
 .color-cabecera{
-  background-color: #f2eba0;
+  background-color: #ffd10b;
 }
 .imagen{
   width: 150px;
@@ -114,7 +114,27 @@ ul a:hover{
   color: #f2eba0;
   background-color: black;
 }
-
+.login{
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+.nodecoration{
+  text-decoration: none;
+}
+.registro{
+  background-color: black;
+  color: #f2eba0;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+  transition: .5s;
+}
+.registro:hover{
+  background-color: #f2eba0 ;
+  color: black;
+}
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
