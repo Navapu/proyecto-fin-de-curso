@@ -135,6 +135,41 @@ ul a:hover{
   background-color: #f2eba0 ;
   color: black;
 }
+.color-body{
+  background-color: #fff4c9;
+}
+.ww70{
+  width: 70%;
+}
+.wwpide{
+  width: 15%;
+  border-radius: 10px;
+  background-color: black;
+  color: #ffd10b ;
+  font-size: 20px;
+  margin-top: 3rem;
+}
+.wwpide a{
+  text-decoration: none;
+  color: #ffd10b ;
+  font-size: 20px;
+}
+.wwpide a:hover{
+  color: #ffd10b;
+}
+.font{
+  font-size: 60px;
+  font-weight: 700;
+}
+.mt-6{
+  margin-top: 6rem;
+}
+.nomargim{
+  margin-bottom: 0px;
+}
+.ww100vw{
+  width: 100vw;
+}
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;

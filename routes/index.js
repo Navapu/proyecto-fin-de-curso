@@ -71,4 +71,7 @@ router.get('/logout', (req, res) => {
         res.redirect('/login')
     }
 })
+router.get('/pide', (req, res) => {
+    res.render('pide.hbs')
+})
 module.exports = router
