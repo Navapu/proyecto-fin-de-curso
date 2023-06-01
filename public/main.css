@@ -173,6 +173,9 @@ ul a:hover{
 .ww50vw{
   width: 50vw;
 }
+.ww65vw{
+  width: 65vw;
+}
 .ww25vw{
   width: 25vw;
 }
@@ -246,6 +249,35 @@ ul a:hover{
 #bore:hover{
   background-color: black;
   color: #ffd10b ;
+}
+.listapedir{
+  margin-left: 5rem;
+  margin-right: 5rem;
+  transition: .5s;
+}
+.listapedir:hover{
+  color: #ffd10b;
+}
+.bloqueul{
+  overflow-x: auto;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+.linea{
+  height: 3px;
+  background-color: #ffd10b;
+  border: none;
+  opacity: 100%;
+}
+.imagenmedia{
+  width: 300px;
+  height: 300px;
+}
+.suscosas{
+  border-radius: 5px;
+}
+.bg-div{
+  background-color: gray;
 }
 @media (prefers-reduced-motion: no-preference) {
   :root {
