@@ -7,6 +7,35 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Pide</h1>
+    <header class="flex">
+        <div class="flex alcentro ww100vw">
+            <img src="/img/logoblanco.png" class="imagenpequena">
+            <h5 class="mt-3 ms-5">ThaiNavarro - Marxalenes</h5>
+        </div>
+        <div class="ww90vw flex derecha me-5">
+            {{#if name}}
+                <a href="/logout" class="nodecoration amarillo negrita"><strong>Logout</strong></a>
+            {{else}}
+                <a href="/login" class="nodecoration amarillo negrita"><strong>Iniciar sesion</strong></a>
+            {{/if}}
+        </div>
+    </header>
+    <div class="ww100vw flex centro mt-3">
+        <button class="ww50vw flex centro mx-5 domicilio" onclick="btn1()" id="boton1">
+            <p class="nomargim">Pedido a domicilio</p>
+        </button>
+        <button class="ww50vw flex centro recoger mx-5" onclick="btn2()" id="boton2">
+            <p class="nomargim">Pedido para recoger</p>
+        </button>
+    </div>
+    <div class="ww100vw">
+        <div class="">
+
+        </div>
+        <div>
+
+        </div>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>

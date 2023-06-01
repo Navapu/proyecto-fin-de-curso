@@ -170,6 +170,69 @@ ul a:hover{
 .ww100vw{
   width: 100vw;
 }
+.ww50vw{
+  width: 50vw;
+}
+.ww90vw{
+  width: 69vw;
+}
+.derecha{
+  align-items: center;
+  justify-content: right;
+}
+.amarillo{
+  color: #ffd10b;
+}
+.derecha a:hover{
+  color: #ffd10b;
+}
+.negrita{
+  font-weight: 900;
+}
+.imagenpequena{
+  width: 100px;
+  height: 100px;
+}
+.bloq{
+  display: block;
+}
+.alcentro{
+  align-items: center;
+}
+.recoger{
+  background-color: #ffd10b ;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+}
+.domicilio{
+  border-radius: 10px;
+  border: 1px dashed black;
+  padding: 10px;
+  background-color: white;
+}
+.pr70{
+  width: 70%;
+}
+.pr30{
+  width: 30%;
+}
+.columna{
+  flex-direction: column;
+}
+.izquierda{
+  justify-content: left;
+}
+.he100{
+  height: 100vh;
+}
+.register{
+  border-radius: 10px;
+  padding: 70px 40px;
+}
+.fondoblanco{
+  background-color: white;
+}
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;

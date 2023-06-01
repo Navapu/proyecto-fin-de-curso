@@ -72,6 +72,10 @@ router.get('/logout', (req, res) => {
     }
 })
 router.get('/pide', (req, res) => {
-    res.render('pide.hbs')
+    if(req.session.loggedin == true){
+        res.render('pide.hbs', {name: req.session.name})
+    }else{
+        res.render('pide.hbs')
+    }
 })
 module.exports = router

@@ -6,22 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
 </head>
-<body>
-    <div class="container p-5 m-3">
-        <form action="/registro" method="POST">
+<body class="bg-dark">
+    <div class="m-3 flex centro he100">
+        <form action="/registro" method="POST" class="flex alcentro izquierda columna border register fondoblanco">
+            <div class="form-group">
+                <img src="/img/logoblanco.png" class="imagenpequena">
+            </div>
             <div class="form-group">
                 <label>Nombre de usuario</label>
-                <input type="text" placeholder="Usuario" name="usuario">
+                <input type="text" placeholder="Usuario" name="usuario" class="my-3" required>
             </div>
             <div class="form-group">
                 <label>Correo electronico</label>
-                <input type="email" placeholder="Correo electrónico" name="email">
+                <input type="email" placeholder="Correo electrónico" name="email" class="my-3" required>
             </div>
             <div class="form-group">
                 <label>Contraseña</label>
-                <input type="password" name="contrasena">
+                <input type="password" name="contrasena" class="my-3" required>
             </div>
-                <button type="submit" class="btn btn-success m-3">Subir</button>
+                <button type="submit" class="recoger my-3 ww100">Registrarse</button>
                 {{#if error}}
                     <p class="text-danger">{{error}}</p>
                 {{/if}}
