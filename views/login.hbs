@@ -6,18 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
-<body>
-    <div class="container p-5 m-3">
-        <form action="/login" method="POST">
+<body class="bg-dark">
+    <div class="m-3 flex centro he100">
+        <form action="/login" method="POST" class="flex alcentro izquierda columna border register fondoblanco">
             <div class="form-group">
-                <label>Correo electronico</label>
-                <input type="email" placeholder="Correo electrónico" name="email">
+                <img src="/img/logoblanco.png" class="imagen">
             </div>
             <div class="form-group">
-                <label>Contraseña</label>
-                <input type="password" name="contrasena">
+                <input type="email" placeholder="Correo electrónico" name="email" class="my-3 ww25vw inputregistro" required>
             </div>
-                <button type="submit" class="btn btn-success m-3">Subir</button>
+            <div class="form-group">
+                <input type="password" name="contrasena" class="my-3 ww25vw inputregistro" placeholder="Contraseña" required>
+            </div>
+                <button type="submit" class="recoger my-3 ww100" id="bore">Iniciar sesion</button>
+                <p>No tienes cuenta todavía? <a href="/registro">Registrate</a></p>
                 {{#if error}}
                     <p class="text-danger">{{error}}</p>
                 {{/if}}

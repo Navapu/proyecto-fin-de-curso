@@ -173,6 +173,9 @@ ul a:hover{
 .ww50vw{
   width: 50vw;
 }
+.ww25vw{
+  width: 25vw;
+}
 .ww90vw{
   width: 69vw;
 }
@@ -232,6 +235,17 @@ ul a:hover{
 }
 .fondoblanco{
   background-color: white;
+}
+.inputregistro{
+  outline: none;
+  border-radius: 5px;
+}
+#bore{
+  transition: .5s;
+}
+#bore:hover{
+  background-color: black;
+  color: #ffd10b ;
 }
 @media (prefers-reduced-motion: no-preference) {
   :root {
