@@ -277,7 +277,13 @@ ul a:hover{
   border-radius: 5px;
 }
 .bg-div{
-  background-color: gray;
+  background-color: #f5ebdc;
+}
+.pointer{
+  cursor: pointer;
+}
+.none{
+  display: none;
 }
 @media (prefers-reduced-motion: no-preference) {
   :root {

@@ -9,7 +9,7 @@
 <body>
     <header class="flex">
         <div class="flex alcentro ww100vw">
-            <img src="/img/logoblanco.png" class="imagenpequena">
+            <a href="/"><img src="/img/logoblanco.png" class="imagenpequena"></a>
             <h5 class="mt-3 ms-5">ThaiNavarro</h5>
         </div>
         <div class="ww90vw flex derecha me-5">
@@ -31,13 +31,13 @@
     <div class="ww100vw mt-5">
         <ul class="ww100vw bloqueul flex">
             <li class="listapedir">
-                <h4>Especialidades</h4>
+                <h4 onclick="abrir()">Especialidades</h4>
             </li>
             <li class="listapedir">
-                <h4>Entrantes</h4>
+                <h4 onclick="aentrante()">Entrantes</h4>
             </li>
             <li class="listapedir">
-                <h4>Sopas</h4>
+                <h4 onclick="asopa()">Sopas</h4>
             </li>
             <li class="listapedir">
                 <h4>Postres</h4>
@@ -45,45 +45,84 @@
             <li class="listapedir">
                 <h4>Bebidas</h4>
             </li>
-            <li class="listapedir">
-                <h4>Promociones</h4>
-            </li>
         </ul>
     </div>
     <hr class="linea">
-    <div class="mx-5 mt-5 ">
+    <div class="mx-5 mt-5" id="especialidad">
         <h3>
             Especialidades
         </h3>
         <div class="flex centro ww100">
-        <div class="ww65vw flex flex-wrap centro">
-            <div class="flex columna centro border  suscosas mx-5">
-                <img src="/img/arroz.png" class="imagenmedia">
-                <div class="flex centro bg-white suscosas">
-                <h2 class="nomargim my-2">Navarroz</h2>
+            <div class="ww65vw flex flex-wrap centro">
+                <div class="flex columna centro border suscosas mx-5 bg-div pointer">
+                    <img src="/img/arroz.png" class="imagenmedia">
+                    <div class="flex centro suscosas">
+                    <h2 class="nomargim my-2">Navarroz</h2>
+                    </div>
+                </div>
+                <div class="flex columna centro mx-5 border my-3 bg-div pointer">
+                    <img src="/img/i.png" class="imagenmedia">
+                    <h2>Elvisa</h2>
+                </div>
+                <div class="flex columna centro mx-5 border my-3 bg-div pointer">
+                    <img src="/img/chem.png" class="imagenmedia">
+                    <h2>Chen</h2>
+                </div>
+                <div class="flex columna centro mx-5 border my-3 bg-div pointer">
+                    <img src="/img/pasta.png" class="imagenmedia">
+                    <h2>4tuNoodles</h2>
+                </div>
+                <div class="flex columna centro mx-5 border my-3 bg-div pointer">
+                    <img src="/img/tom.png" class="imagenmedia">
+                    <h2>Adrian Arroz</h2>
+                </div>
+                <div class="flex columna centro mx-5 border my-3 bg-div pointer">
+                    <img src="/img/ensalada.png" class="imagenmedia">
+                    <h2>Xexuga</h2>
                 </div>
             </div>
-            <div class="flex columna centro mx-5 border my-3">
-                <img src="/img/arroz.png" class="imagenmedia">
-                <h2>Navarroz</h2>
-            </div>
-            <div class="flex columna centro mx-5 border my-3">
-                <img src="/img/arroz.png" class="imagenmedia">
-                <h2>Navarroz</h2>
-            </div>
-            <div class="flex columna centro mx-5 border my-3">
-                <img src="/img/arroz.png" class="imagenmedia">
-                <h2>Navarroz</h2>
-            </div>
-            <div class="flex columna centro mx-5 border my-3">
-                <img src="/img/arroz.png" class="imagenmedia">
-                <h2>Navarroz</h2>
-            </div>
-            <div class="flex columna centro mx-5 border my-3">
-                <img src="/img/arroz.png" class="imagenmedia">
-                <h2>Navarroz</h2>
+        </div>
+    </div>
+    <div class="mx-5 mt-5 none" id="entrante">
+        <h3>
+            Entrantes
+        </h3>
+        <div class="flex centro ww100">
+            <div class="ww65vw flex flex-wrap centro">
+                <div class="flex columna centro border suscosas mx-5 bg-div pointer">
+                    <img src="/img/takoyaki.png" class="imagenmedia">
+                    <h2 class="nomargim my-2">Takoyaki</h2>
+                </div>
+                <div class="flex columna centro mx-5 border my-3 bg-div pointer">
+                    <img src="/img/wantun.png" class="imagenmedia">
+                    <h2>Wan Tun</h2>
+                </div>
+                <div class="flex columna centro mx-5 border my-3 bg-div pointer">
+                    <img src="/img/gyozas.jpg" class="imagenmedia">
+                    <h2>Gyozas</h2>
+                </div>
             </div>
         </div>
+    </div>
+    <div class="mx-5 mt-5 none" id="sopa">
+        <h3>
+            Sopas
+        </h3>
+        <div class="flex centro ww100">
+            <div class="ww65vw flex flex-wrap centro">
+                <div class="flex columna centro border suscosas mx-5 bg-div pointer">
+                    <img src="/img/dowdo.png" class="imagenmedia">
+                    <h2 class="nomargim my-2">Sopa Dowdo</h2>
+                </div>
+                <div class="flex columna centro mx-5 border my-3 bg-div pointer">
+                    <img src="/img/yaya.webp" class="imagenmedia">
+                    <h2>Sopa la yaya</h2>
+                </div>
+                <div class="flex columna centro mx-5 border my-3 bg-div pointer">
+                    <img src="/img/pobre.png" class="imagenmedia">
+                    <h2>Sopa de pobre</h2>
+                </div>
+            </div>
         </div>
     </div>
     <script src="main.js"></script>
