@@ -3,16 +3,13 @@ const router = express.Router()
 const pool = require ('../database')
 const bcrypt = require('bcrypt')
 const nodemailer = require('nodemailer');
-
+const _ = require('lodash');
 router.get('/', (req, res) =>{
     if(req.session.loggedin == true){
         res.render('index.hbs', {name: req.session.name})
     }else{
         res.render('index.hbs')
     }
-})
-router.get('/carta', (req, res) =>{
-    res.render('carta.hbs')
 })
 router.get('/registro', (req, res) =>{
     if(req.session.loggedin != true){
@@ -204,6 +201,9 @@ router.post('/reserva', async (req, res) =>{
        subject: 'Reserva confirmada',
        html: `<h1>Reserva confirmada</h1><br><h3>Nombre: `+nombre+`</h3><h3>Telefono: `+telefono+`</h3><h3>Email: `+email+`</h3><h3>Personas: `+personas+`</h3><h3>Hora: `+hora+`</h3><h3>Fecha: `+fecha+`</h3>`
     })
+    _.delay(function() {
+        res.redirect('/')
+    }, 2000);
 });
 
 

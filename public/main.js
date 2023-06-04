@@ -852,3 +852,12 @@ function funcion(){
         casa.style.display = 'none'
     }
 }
+function reserva(){
+    let poner = document.getElementById('reservaconfirmada')
+    console.log(poner)
+    poner.style.display = 'flex'
+    setTimeout(function() {
+        let poner = document.getElementById('reservaconfirmada')
+        poner.style.display = 'none'
+    }, 2000);
+}

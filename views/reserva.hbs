@@ -72,8 +72,13 @@
                 <input type="date" placeholder="Fecha" name="fecha" class="inputreserva" required>
             </div>
         </div>
-        <button type="submit" class="ww100 tarjeta">Reservar</button> 
+        <button type="submit" class="ww100 tarjeta" onclick="reserva()">Reservar</button>
+        <div class="ww100 flex centro mt-5 text-success" style="display: none;" id="reservaconfirmada">
+        <i class="fa-regular fa-circle-check text-success tamañoi mx-3"></i>
+        <h1>Reserva confirmada</h1> 
+        </div>
         </form>
     </div>
+        <script src="main.js"></script>
 </body>
 </html>
