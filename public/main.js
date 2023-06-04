@@ -861,3 +861,12 @@ function reserva(){
         poner.style.display = 'none'
     }, 2000);
 }
+function contacto(){
+    let poner = document.getElementById('contacto')
+    console.log(poner)
+    poner.style.display = 'flex'
+    setTimeout(function() {
+        let poner = document.getElementById('contacto')
+        poner.style.display = 'none'
+    }, 2000);
+}

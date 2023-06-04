@@ -418,6 +418,9 @@ ul a:hover{
   border-left: none;
   border-right: none;  
 }
+.bg-gris{
+  background-color: rgb(224, 224, 224);
+}
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
