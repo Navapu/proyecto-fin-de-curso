@@ -275,6 +275,7 @@ ul a:hover{
   overflow-x: auto;
   white-space: nowrap;
   flex-wrap: nowrap;
+  justify-content: center;
 }
 .linea{
   height: 3px;
@@ -428,16 +429,50 @@ ul a:hover{
   border-left: none;
   border-right: none;  
 }
+.altura{
+  height: 82vh;
+}
 .bg-gris{
   background-color: rgb(224, 224, 224);
+}
+.ww33{
+  width: 33%;
+}
+.bordeblanco{
+  border: 1px solid white;
 }
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
   }
 }
-
-body {
+@media screen and (max-width: 830px) {
+  .ww70{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .wwpide{
+    width: 70%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .ap{
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    justify-content: initial;
+  }
+}
+@media screen and (max-width: 1000px){
+  .bloqueul{
+    justify-content: initial;
+  }
+}
+  body {
   margin: 0;
   font-family: var(--bs-body-font-family);
   font-size: var(--bs-body-font-size);
