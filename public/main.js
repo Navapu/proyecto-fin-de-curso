@@ -2,6 +2,11 @@ let comprobar = 0
 let total = 0
 recoger = true
 llevar = false
+
+//FUNCION DE LOS BOTONES PARA ELEGIR SI EL PEDIDO SERA PARA DOMICILIO O PARA RECOGER
+//FUNCION DE LOS BOTONES PARA ELEGIR SI EL PEDIDO SERA PARA DOMICILIO O PARA RECOGER
+//FUNCION DE LOS BOTONES PARA ELEGIR SI EL PEDIDO SERA PARA DOMICILIO O PARA RECOGER
+
 function btn1(){
     let boton1 = document.getElementById('boton1')
     let boton2 = document.getElementById('boton2')
@@ -23,6 +28,11 @@ function btn2(){
     llevar = false
     localStorage.setItem("variable", llevar);
 }
+
+//GRUPO DE FUNCIONES PARA DESPLEGAR LO QUE EL USUARIO QUIERA PEDIR: ESPECIALIDADES, ENTRANTES, ETC
+//GRUPO DE FUNCIONES PARA DESPLEGAR LO QUE EL USUARIO QUIERA PEDIR: ESPECIALIDADES, ENTRANTES, ETC
+//GRUPO DE FUNCIONES PARA DESPLEGAR LO QUE EL USUARIO QUIERA PEDIR: ESPECIALIDADES, ENTRANTES, ETC
+
 function abrir(){
     let especialidad = document.getElementById('especialidad')
     let entrante = document.getElementById('entrante')
@@ -64,6 +74,9 @@ function apostre(){
     entrante.style.display = 'none'
     sopa.style.display = 'none'
 }
+// GRUPO DE FUNCIONES PARA PEDIR LAS ESPECIALIDADES Y QUITAR LOS INGREDIENTES QUE EL USARIO DESEE
+// GRUPO DE FUNCIONES PARA PEDIR LAS ESPECIALIDADES Y QUITAR LOS INGREDIENTES QUE EL USARIO DESEE
+// GRUPO DE FUNCIONES PARA PEDIR LAS ESPECIALIDADES Y QUITAR LOS INGREDIENTES QUE EL USARIO DESEE
 
 function navarroz (){
     comprobar += 1
@@ -486,6 +499,11 @@ function xexuga (){
     arroz.appendChild(precio)
     arroz.appendChild(hr)
 }
+
+//GRUPO DE FUNCIONES PARA AÑADIR EL ENTRANTE SELECCIONADO AL PEDIDO
+//GRUPO DE FUNCIONES PARA AÑADIR EL ENTRANTE SELECCIONADO AL PEDIDO
+//GRUPO DE FUNCIONES PARA AÑADIR EL ENTRANTE SELECCIONADO AL PEDIDO
+
 function takoyaki (){
     comprobar += 1
     total += 5
@@ -591,6 +609,10 @@ function gyozas (){
     arroz.appendChild(precio)
     arroz.appendChild(hr)
 }
+//GRUPO DE FUNCIONES PARA AÑADIR LA SOPA SELECCIONADA AL PEDIDO
+//GRUPO DE FUNCIONES PARA AÑADIR LA SOPA SELECCIONADA AL PEDIDO
+//GRUPO DE FUNCIONES PARA AÑADIR LA SOPA SELECCIONADA AL PEDIDO
+
 function dowdo (){
     comprobar += 1
     total += 4.5
@@ -626,6 +648,10 @@ function dowdo (){
     arroz.appendChild(precio)
     arroz.appendChild(hr)
 }
+//GRUPO DE FUNCIONES PARA AÑADIR LA SOPA SELECCIONADA AL PEDIDO
+//GRUPO DE FUNCIONES PARA AÑADIR LA SOPA SELECCIONADA AL PEDIDO
+//GRUPO DE FUNCIONES PARA AÑADIR LA SOPA SELECCIONADA AL PEDIDO
+
 function yaya (){
     comprobar += 1
     total += 4.5
@@ -661,6 +687,10 @@ function yaya (){
     arroz.appendChild(precio)
     arroz.appendChild(hr)
 }
+//GRUPO DE FUNCIONES PARA AÑADIR LA SOPA SELECCIONADA AL PEDIDO
+//GRUPO DE FUNCIONES PARA AÑADIR LA SOPA SELECCIONADA AL PEDIDO
+//GRUPO DE FUNCIONES PARA AÑADIR LA SOPA SELECCIONADA AL PEDIDO
+
 function pobre (){
     comprobar += 1
     total += 4.5
@@ -696,6 +726,10 @@ function pobre (){
     arroz.appendChild(precio)
     arroz.appendChild(hr)
 }
+//GRUPO DE FUNCIONES PARA AÑADIR EL POSTRE SELECCIONADO AL PEDIDO
+//GRUPO DE FUNCIONES PARA AÑADIR EL POSTRE SELECCIONADO AL PEDIDO
+//GRUPO DE FUNCIONES PARA AÑADIR EL POSTRE SELECCIONADO AL PEDIDO
+
 function coulant (){
     comprobar += 1
     total += 5
@@ -801,6 +835,11 @@ function queso (){
     arroz.appendChild(precio)
     arroz.appendChild(hr)
 }
+
+//FUNCION QUE PREVIENE EL PODER HACER EL PEDIDO SIN HABER AÑADIDO NADA A ESTE
+//FUNCION QUE PREVIENE EL PODER HACER EL PEDIDO SIN HABER AÑADIDO NADA A ESTE
+//FUNCION QUE PREVIENE EL PODER HACER EL PEDIDO SIN HABER AÑADIDO NADA A ESTE
+
 function raton (){
     if (comprobar == 0){
         let div = document.getElementById('nonex')
@@ -835,6 +874,10 @@ function raton (){
         }
     }
 }
+//FUNCION PARA SABER SI EL PEDIDO ES PARA RECOGER O A DOMICILIO
+//FUNCION PARA SABER SI EL PEDIDO ES PARA RECOGER O A DOMICILIO
+//FUNCION PARA SABER SI EL PEDIDO ES PARA RECOGER O A DOMICILIO
+
 function funcion(){
     let total = localStorage.getItem("dostotal");
     let envio = localStorage.getItem("variable");
@@ -852,6 +895,10 @@ function funcion(){
         casa.style.display = 'none'
     }
 }
+//FUNCION PARA CONFIRMAR RESERVA
+//FUNCION PARA CONFIRMAR RESERVA
+//FUNCION PARA CONFIRMAR RESERVA
+
 function reserva(){
     let poner = document.getElementById('reservaconfirmada')
     console.log(poner)
@@ -861,6 +908,10 @@ function reserva(){
         poner.style.display = 'none'
     }, 2000);
 }
+//FUNCION PARA CONFIRMAR LA SUGERENCIA
+//FUNCION PARA CONFIRMAR LA SUGERENCIA
+//FUNCION PARA CONFIRMAR LA SUGERENCIA
+
 function contacto(){
     let poner = document.getElementById('contacto')
     console.log(poner)
