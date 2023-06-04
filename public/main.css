@@ -195,6 +195,13 @@ ul a:hover{
 .amarillo{
   color: #ffd10b;
 }
+.amarillo2{
+  color: #ffd10b;
+  transition: .5s;
+}
+.amarillo2:hover{
+  color: white;
+}
 .derecha a:hover{
   color: #ffd10b;
 }
@@ -403,6 +410,9 @@ ul a:hover{
 }
 .fondoamarillo{
   background-color: #fff0b2;
+}
+.fondoamarillo1{
+  background-color: #fff1b7;
 }
 .tamañoi{
   font-size: 50px;

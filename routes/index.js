@@ -237,4 +237,7 @@ router.post('/contacto', async (req, res) =>{
         res.redirect('/')
     }, 2000);
 });
+router.get('*', (req, res) => {
+    res.render('404.hbs')
+})
 module.exports = router
