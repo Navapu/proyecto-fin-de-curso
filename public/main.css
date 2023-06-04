@@ -404,6 +404,20 @@ ul a:hover{
 .fondoamarillo{
   background-color: #fff0b2;
 }
+.tamañoi{
+  font-size: 50px;
+}
+.radio{
+  border-radius: 10px;
+  padding: 6rem 0rem 6rem 0rem;
+}
+.inputreserva{
+  outline: none;
+  padding: 5px 0px 5px 2px;
+  border-top: none;
+  border-left: none;
+  border-right: none;  
+}
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;

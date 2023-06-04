@@ -174,5 +174,37 @@ router.post('/confirmar', async (req, res) =>{
             text: 'Pedido a domicilio con pago en tarjeta a nombre de: ' + req.session.name + ' La dirección es: ' + direccion
          })
      }
+     res.render('peconfirmado.hbs')
 });
+router.get('/reserva', (req, res) => {
+    if(req.session.loggedin == true){
+        res.render('reserva.hbs', {name: req.session.name})
+    }else{
+        res.render('reserva.hbs')
+    }
+})
+router.post('/reserva', async (req, res) =>{
+    const {nombre, telefono, email, personas, hora, fecha } = req.body
+    let transporter = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true,
+        auth: {
+          user: 'naavarrothai@gmail.com',
+          pass: 'hqwgevdkorthgnxe',
+        },
+      });
+      transporter.verify().then(() =>{
+        console.log('Listo')
+      });
+   
+      transporter.sendMail({
+       from: 'Prueba "<naavarrothai@gmail.com>"',
+       to: 'drojannp@gmail.com',
+       subject: 'Reserva confirmada',
+       html: `<h1>Reserva confirmada</h1><br><h3>Nombre: `+nombre+`</h3><h3>Telefono: `+telefono+`</h3><h3>Email: `+email+`</h3><h3>Personas: `+personas+`</h3><h3>Hora: `+hora+`</h3><h3>Fecha: `+fecha+`</h3>`
+    })
+});
+
+
 module.exports = router
