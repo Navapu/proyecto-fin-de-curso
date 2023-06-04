@@ -5,7 +5,6 @@ const myconecction = require('express-myconnection')
 const session = require('express-session')
 const bodyParser = require('body-parser')
 const app = express()
-
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', engine({
   defaultLayout: 'main',

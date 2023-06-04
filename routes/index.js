@@ -2,6 +2,8 @@ const express = require('express')
 const router = express.Router()
 const pool = require ('../database')
 const bcrypt = require('bcrypt')
+const nodemailer = require('nodemailer');
+
 router.get('/', (req, res) =>{
     if(req.session.loggedin == true){
         res.render('index.hbs', {name: req.session.name})
@@ -85,4 +87,92 @@ router.get('/confirmar', (req, res) => {
         res.render('confirmar.hbs')
     }
 })
+router.post('/confirmar', async (req, res) =>{
+    let {direccion, efectivo, tarjeta, recogerefectivo, recogertarjeta} = req.body
+    if (recogerefectivo == ''){
+        let transporter = nodemailer.createTransport({
+            host: 'smtp.gmail.com',
+            port: 465,
+            secure: true,
+            auth: {
+              user: 'naavarrothai@gmail.com',
+              pass: 'hqwgevdkorthgnxe',
+            },
+          });
+          transporter.verify().then(() =>{
+            console.log('Listo')
+          });
+       
+          transporter.sendMail({
+           from: 'Prueba "<naavarrothai@gmail.com>"',
+           to: 'drojannp@gmail.com',
+           subject: 'Pedido confirmado',
+           text: 'Pedido para recoger con pago en efectivo a nombre de: ' + req.session.name
+        })
+    }
+    if (recogertarjeta == ''){
+        let transporter = nodemailer.createTransport({
+            host: 'smtp.gmail.com',
+            port: 465,
+            secure: true,
+            auth: {
+              user: 'naavarrothai@gmail.com',
+              pass: 'hqwgevdkorthgnxe',
+            },
+          });
+          transporter.verify().then(() =>{
+            console.log('Listo')
+          });
+       
+          transporter.sendMail({
+           from: 'Prueba "<naavarrothai@gmail.com>"',
+           to: 'drojannp@gmail.com',
+           subject: 'Pedido confirmado',
+           text: 'Pedido para recoger con pago en tarjeta a nombre de: ' + req.session.name
+        })
+    }
+     if(efectivo == ''){
+         let transporter = nodemailer.createTransport({
+             host: 'smtp.gmail.com',
+             port: 465,
+             secure: true,
+             auth: {
+               user: 'naavarrothai@gmail.com',
+               pass: 'hqwgevdkorthgnxe',
+             },
+           });
+           transporter.verify().then(() =>{
+             console.log('Listo')
+           });
+        
+           transporter.sendMail({
+            from: 'Prueba "<naavarrothai@gmail.com>"',
+            to: 'drojannp@gmail.com',
+            subject: 'Pedido confirmado',
+            text: 'Pedido a domicilio con pago en efectivo a nombre de: ' + req.session.name + ' La dirección es: ' + direccion
+         })
+     }
+     if (tarjeta == ''){
+         tarjeta = 'Tarjeta'
+         let transporter = nodemailer.createTransport({
+             host: 'smtp.gmail.com',
+             port: 465,
+             secure: true,
+             auth: {
+               user: 'naavarrothai@gmail.com',
+               pass: 'hqwgevdkorthgnxe',
+             },
+           });
+           transporter.verify().then(() =>{
+             console.log('Listo')
+           });
+        
+           transporter.sendMail({
+            from: 'Prueba "<naavarrothai@gmail.com>"',
+            to: 'drojannp@gmail.com',
+            subject: 'Pedido confirmado',
+            text: 'Pedido a domicilio con pago en tarjeta a nombre de: ' + req.session.name + ' La dirección es: ' + direccion
+         })
+     }
+});
 module.exports = router

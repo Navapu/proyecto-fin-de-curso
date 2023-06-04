@@ -10,9 +10,8 @@ function btn1(){
     boton2.style.backgroundColor = "white"
     boton2.style.border = "1px dashed black"
     llevar = true
-    recoger = false
     localStorage.setItem("variable", llevar);
-    
+        
 }
 function btn2(){
     let boton1 = document.getElementById('boton1')
@@ -22,7 +21,6 @@ function btn2(){
     boton1.style.backgroundColor = "white"
     boton1.style.border = "1px dashed black"
     llevar = false
-    recoger = true
     localStorage.setItem("variable", llevar);
 }
 function abrir(){
@@ -845,8 +843,7 @@ function funcion(){
     console.log(recoger)
     let recogida = document.getElementById('recogida')
     let casa = document.getElementById('domicilio')
-    console.log(recogida)
-    if (envio){
+    if (envio == 'true'){
         casa.style.display = 'flex'
         recogida.style.display = 'none'
 
