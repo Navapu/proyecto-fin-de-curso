@@ -5,7 +5,7 @@ const myconecction = require('express-myconnection')
 const bodyParser = require('body-parser')
 const pool = require ('./database.js')
 const session = require('express-session');
-// const mysqlStore = require('express-mysql-session')(session);
+const mysqlStore = require('express-mysql-session')(session);
 const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', engine({
@@ -16,12 +16,12 @@ app.engine('.hbs', engine({
   helpers: require('./lib/handlebars')
 }))
 
-// app.use(session({
-//   secret: 'tfgsession',
-//   resave: false,
-//   saveUninitialized: false,
-//   store: new mysqlStore({},pool)
-// }))
+ app.use(session({
+   secret: 'tfgsession',
+   resave: false,
+   saveUninitialized: false,
+   store: new mysqlStore({},pool)
+ }))
 
 app.set('view engine', '.hbs');
 app.use(express.urlencoded({ extended: false }))
