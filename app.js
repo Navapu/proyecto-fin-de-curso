@@ -30,11 +30,11 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(bodyParser.json());
-app.use(session({
-  secret: 'secret',
-  resave: true,
-  saveUninitialized: true
-}))
+// app.use(session({
+//   secret: 'secret',
+//   resave: true,
+//   saveUninitialized: true
+// }))
 const indexRouter = require('./routes/index')
 app.listen(3000)
 console.log('Escuchando en el puerto 3000')
