@@ -1,4 +1,7 @@
-
+let comprobar = 0
+let total = 0
+recoger = true
+llevar = false
 function btn1(){
     let boton1 = document.getElementById('boton1')
     let boton2 = document.getElementById('boton2')
@@ -6,6 +9,10 @@ function btn1(){
     boton1.style.border = "none"
     boton2.style.backgroundColor = "white"
     boton2.style.border = "1px dashed black"
+    llevar = true
+    recoger = false
+    localStorage.setItem("variable", llevar);
+    
 }
 function btn2(){
     let boton1 = document.getElementById('boton1')
@@ -14,18 +21,19 @@ function btn2(){
     boton2.style.border = "none"
     boton1.style.backgroundColor = "white"
     boton1.style.border = "1px dashed black"
+    llevar = false
+    recoger = true
+    localStorage.setItem("variable", llevar);
 }
 function abrir(){
     let especialidad = document.getElementById('especialidad')
     let entrante = document.getElementById('entrante')
     let sopa = document.getElementById('sopa')
     let postre = document.getElementById('postre')
-    let bebida = document.getElementById('bebida')
     especialidad.style.display = 'block'
     entrante.style.display = 'none'
     sopa.style.display = 'none'
     postre.style.display = 'none'
-    bebida.style.display = 'none'
 
 }
 function aentrante(){
@@ -33,8 +41,6 @@ function aentrante(){
     let entrante = document.getElementById('entrante')
     let sopa = document.getElementById('sopa')
     let postre = document.getElementById('postre')
-    let bebida = document.getElementById('bebida')
-    bebida.style.display = 'none'
     postre.style.display = 'none'
     especialidad.style.display = 'none'
     entrante.style.display = 'block'
@@ -45,8 +51,6 @@ function asopa(){
     let entrante = document.getElementById('entrante')
     let sopa = document.getElementById('sopa')
     let postre = document.getElementById('postre')
-    let bebida = document.getElementById('bebida')
-    bebida.style.display = 'none'
     postre.style.display = 'none'
     especialidad.style.display = 'none'
     entrante.style.display = 'none'
@@ -57,37 +61,15 @@ function apostre(){
     let entrante = document.getElementById('entrante')
     let sopa = document.getElementById('sopa')
     let postre = document.getElementById('postre')
-    let bebida = document.getElementById('bebida')
-    bebida.style.display = 'none'
     postre.style.display = 'block'
     especialidad.style.display = 'none'
     entrante.style.display = 'none'
     sopa.style.display = 'none'
 }
-function abebida(){
-    let especialidad = document.getElementById('especialidad')
-    let entrante = document.getElementById('entrante')
-    let sopa = document.getElementById('sopa')
-    let postre = document.getElementById('postre')
-    let bebida = document.getElementById('bebida')
-    bebida.style.display = 'block'
-    postre.style.display = 'none'
-    especialidad.style.display = 'none'
-    entrante.style.display = 'none'
-    sopa.style.display = 'none'
-}
-function pedir(){
-    let div = document.getElementById('nonex')
-    let p = document.createElement('p')
-    p.textContent = "Hola"
-    div.appendChild(p)
-    console.log(div)
-}
 
-                                                                            // FUNCION AÑADIR NAVARRO
-                                                                            // FUNCION AÑADIR NAVARROZ
-                                                                            // FUNCION AÑADIR NAVARROZ
 function navarroz (){
+    comprobar += 1
+    total += 7
     let cebolla = document.getElementById('cebolla').checked
     let champiñones = document.getElementById('champiñones').checked
     let pollo = document.getElementById('pollo').checked
@@ -156,6 +138,9 @@ function navarroz (){
     arroz.appendChild(hr)
 }
 function ensalada (){
+    comprobar += 1
+    total += 8.5
+    comprobar += 1
     let tomate = document.getElementById('tomate').checked
     let gambas = document.getElementById('gambas').checked
     let pepino = document.getElementById('pepino').checked
@@ -224,6 +209,8 @@ function ensalada (){
     arroz.appendChild(hr)
 }
 function chen (){
+    comprobar += 1
+    total += 8
     let ternera = document.getElementById('ternera').checked
     let tofu = document.getElementById('tofu').checked
     let pollo = document.getElementById('pollo1').checked
@@ -292,6 +279,8 @@ function chen (){
     arroz.appendChild(hr)
 }
 function fortu (){
+    comprobar += 1
+    total += 7.5
     let cerdo = document.getElementById('cerdo').checked
     let cachai = document.getElementById('cachai').checked
     let zanahoria = document.getElementById('zanahoria').checked
@@ -360,6 +349,8 @@ function fortu (){
     arroz.appendChild(hr)
 }
 function adrian (){
+    comprobar += 1
+    total += 7
     let pimiento = document.getElementById('pimiento').checked
     let piña = document.getElementById('piña').checked
     let pollo3 = document.getElementById('pollo3').checked
@@ -428,6 +419,8 @@ function adrian (){
     arroz.appendChild(hr)
 }
 function xexuga (){
+    comprobar += 1
+    total += 9
     let queso = document.getElementById('queso').checked
     let frita3 = document.getElementById('frita3').checked
     let papaya = document.getElementById('papaya').checked
@@ -494,4 +487,371 @@ function xexuga (){
     }
     arroz.appendChild(precio)
     arroz.appendChild(hr)
+}
+function takoyaki (){
+    comprobar += 1
+    total += 5
+    let div = document.getElementById('nonex')
+    let arroz = document.createElement('div')
+    let precio = document.createElement('div')
+    let preciox = document.createElement('h3')
+    let verde = document.getElementById('verdex')
+    verde.style.display = 'block'
+    preciox.textContent = "5€"
+    precio.appendChild(preciox)
+    precio.style.border = "none"
+    precio.style.display = 'flex'
+    precio.style.justifyContent = 'right'
+    preciox.style.marginRight = '1rem'
+    precio.style.marginTop = '0px'
+    precio.style.marginBottom = '0px'
+    preciox.style.color = '#ffd10b'
+    preciox.style.fontWeight = '500'
+    let plato = document.createElement('h3')
+    let img = document.createElement('img')
+    let hr = document.createElement('hr')
+    img.setAttribute('src', "/img/entrante/takoyaki.png")
+    arroz.appendChild(plato)
+    arroz.appendChild(img)
+    div.appendChild(arroz)
+    console.log(div)
+    setTimeout(function() {
+        let verde = document.getElementById('verdex')
+        verde.style.display = 'none'
+    }, 2000);
+    plato.textContent = 'Takoyaki' 
+    arroz.appendChild(precio)
+    arroz.appendChild(hr)
+}
+function wantun (){
+    comprobar += 1
+    total += 4
+    let div = document.getElementById('nonex')
+    let arroz = document.createElement('div')
+    let precio = document.createElement('div')
+    let preciox = document.createElement('h3')
+    let verde = document.getElementById('verdex1')
+    verde.style.display = 'block'
+    preciox.textContent = "4€"
+    precio.appendChild(preciox)
+    precio.style.border = "none"
+    precio.style.display = 'flex'
+    precio.style.justifyContent = 'right'
+    preciox.style.marginRight = '1rem'
+    precio.style.marginTop = '0px'
+    precio.style.marginBottom = '0px'
+    preciox.style.color = '#ffd10b'
+    preciox.style.fontWeight = '500'
+    let plato = document.createElement('h3')
+    let img = document.createElement('img')
+    let hr = document.createElement('hr')
+    img.setAttribute('src', "/img/entrante/wantun.png")
+    arroz.appendChild(plato)
+    arroz.appendChild(img)
+    div.appendChild(arroz)
+    console.log(div)
+    setTimeout(function() {
+        let verde = document.getElementById('verdex1')
+        verde.style.display = 'none'
+    }, 2000);
+    plato.textContent = 'Wan tun' 
+    arroz.appendChild(precio)
+    arroz.appendChild(hr)
+}
+function gyozas (){
+    comprobar += 1
+    total += 4.5
+    let div = document.getElementById('nonex')
+    let arroz = document.createElement('div')
+    let precio = document.createElement('div')
+    let preciox = document.createElement('h3')
+    let verde = document.getElementById('verdex2')
+    verde.style.display = 'block'
+    preciox.textContent = "4,5€"
+    precio.appendChild(preciox)
+    precio.style.border = "none"
+    precio.style.display = 'flex'
+    precio.style.justifyContent = 'right'
+    preciox.style.marginRight = '1rem'
+    precio.style.marginTop = '0px'
+    precio.style.marginBottom = '0px'
+    preciox.style.color = '#ffd10b'
+    preciox.style.fontWeight = '500'
+    let plato = document.createElement('h3')
+    let img = document.createElement('img')
+    let hr = document.createElement('hr')
+    img.setAttribute('src', "/img/entrante/gyozas.jpg")
+    arroz.appendChild(plato)
+    arroz.appendChild(img)
+    div.appendChild(arroz)
+    console.log(div)
+    setTimeout(function() {
+        let verde = document.getElementById('verdex2')
+        verde.style.display = 'none'
+    }, 2000);
+    plato.textContent = 'Gyozas' 
+    arroz.appendChild(precio)
+    arroz.appendChild(hr)
+}
+function dowdo (){
+    comprobar += 1
+    total += 4.5
+    let div = document.getElementById('nonex')
+    let arroz = document.createElement('div')
+    let precio = document.createElement('div')
+    let preciox = document.createElement('h3')
+    let verde = document.getElementById('verdex3')
+    verde.style.display = 'block'
+    preciox.textContent = "4,5€"
+    precio.appendChild(preciox)
+    precio.style.border = "none"
+    precio.style.display = 'flex'
+    precio.style.justifyContent = 'right'
+    preciox.style.marginRight = '1rem'
+    precio.style.marginTop = '0px'
+    precio.style.marginBottom = '0px'
+    preciox.style.color = '#ffd10b'
+    preciox.style.fontWeight = '500'
+    let plato = document.createElement('h3')
+    let img = document.createElement('img')
+    let hr = document.createElement('hr')
+    img.setAttribute('src', "/img/sopa/dowdo.png")
+    arroz.appendChild(plato)
+    arroz.appendChild(img)
+    div.appendChild(arroz)
+    console.log(div)
+    setTimeout(function() {
+        let verde = document.getElementById('verdex3')
+        verde.style.display = 'none'
+    }, 2000);
+    plato.textContent = 'Sopa dowdo' 
+    arroz.appendChild(precio)
+    arroz.appendChild(hr)
+}
+function yaya (){
+    comprobar += 1
+    total += 4.5
+    let div = document.getElementById('nonex')
+    let arroz = document.createElement('div')
+    let precio = document.createElement('div')
+    let preciox = document.createElement('h3')
+    let verde = document.getElementById('verdex5')
+    verde.style.display = 'block'
+    preciox.textContent = "4,5€"
+    precio.appendChild(preciox)
+    precio.style.border = "none"
+    precio.style.display = 'flex'
+    precio.style.justifyContent = 'right'
+    preciox.style.marginRight = '1rem'
+    precio.style.marginTop = '0px'
+    precio.style.marginBottom = '0px'
+    preciox.style.color = '#ffd10b'
+    preciox.style.fontWeight = '500'
+    let plato = document.createElement('h3')
+    let img = document.createElement('img')
+    let hr = document.createElement('hr')
+    img.setAttribute('src', "/img/sopa/yaya.webp")
+    arroz.appendChild(plato)
+    arroz.appendChild(img)
+    div.appendChild(arroz)
+    console.log(div)
+    setTimeout(function() {
+        let verde = document.getElementById('verdex5')
+        verde.style.display = 'none'
+    }, 2000);
+    plato.textContent = 'Sopa la yaya' 
+    arroz.appendChild(precio)
+    arroz.appendChild(hr)
+}
+function pobre (){
+    comprobar += 1
+    total += 4.5
+    let div = document.getElementById('nonex')
+    let arroz = document.createElement('div')
+    let precio = document.createElement('div')
+    let preciox = document.createElement('h3')
+    let verde = document.getElementById('verdex6')
+    verde.style.display = 'block'
+    preciox.textContent = "4,5€"
+    precio.appendChild(preciox)
+    precio.style.border = "none"
+    precio.style.display = 'flex'
+    precio.style.justifyContent = 'right'
+    preciox.style.marginRight = '1rem'
+    precio.style.marginTop = '0px'
+    precio.style.marginBottom = '0px'
+    preciox.style.color = '#ffd10b'
+    preciox.style.fontWeight = '500'
+    let plato = document.createElement('h3')
+    let img = document.createElement('img')
+    let hr = document.createElement('hr')
+    img.setAttribute('src', "/img/sopa/pobre.png")
+    arroz.appendChild(plato)
+    arroz.appendChild(img)
+    div.appendChild(arroz)
+    console.log(div)
+    setTimeout(function() {
+        let verde = document.getElementById('verdex6')
+        verde.style.display = 'none'
+    }, 2000);
+    plato.textContent = 'Sopa de pobre' 
+    arroz.appendChild(precio)
+    arroz.appendChild(hr)
+}
+function coulant (){
+    comprobar += 1
+    total += 5
+    let div = document.getElementById('nonex')
+    let arroz = document.createElement('div')
+    let precio = document.createElement('div')
+    let preciox = document.createElement('h3')
+    let verde = document.getElementById('verdex7')
+    verde.style.display = 'block'
+    preciox.textContent = "5€"
+    precio.appendChild(preciox)
+    precio.style.border = "none"
+    precio.style.display = 'flex'
+    precio.style.justifyContent = 'right'
+    preciox.style.marginRight = '1rem'
+    precio.style.marginTop = '0px'
+    precio.style.marginBottom = '0px'
+    preciox.style.color = '#ffd10b'
+    preciox.style.fontWeight = '500'
+    let plato = document.createElement('h3')
+    let img = document.createElement('img')
+    let hr = document.createElement('hr')
+    img.setAttribute('src', "/img/postre/postre.webp")
+    arroz.appendChild(plato)
+    arroz.appendChild(img)
+    div.appendChild(arroz)
+    console.log(div)
+    setTimeout(function() {
+        let verde = document.getElementById('verdex7')
+        verde.style.display = 'none'
+    }, 2000);
+    plato.textContent = 'Coulant' 
+    arroz.appendChild(precio)
+    arroz.appendChild(hr)
+}
+function tarta (){
+    comprobar += 1
+    total += 3
+    let div = document.getElementById('nonex')
+    let arroz = document.createElement('div')
+    let precio = document.createElement('div')
+    let preciox = document.createElement('h3')
+    let verde = document.getElementById('verdex8')
+    verde.style.display = 'block'
+    preciox.textContent = "3€"
+    precio.appendChild(preciox)
+    precio.style.border = "none"
+    precio.style.display = 'flex'
+    precio.style.justifyContent = 'right'
+    preciox.style.marginRight = '1rem'
+    precio.style.marginTop = '0px'
+    precio.style.marginBottom = '0px'
+    preciox.style.color = '#ffd10b'
+    preciox.style.fontWeight = '500'
+    let plato = document.createElement('h3')
+    let img = document.createElement('img')
+    let hr = document.createElement('hr')
+    img.setAttribute('src', "/img/postre/tarta.png")
+    arroz.appendChild(plato)
+    arroz.appendChild(img)
+    div.appendChild(arroz)
+    console.log(div)
+    setTimeout(function() {
+        let verde = document.getElementById('verdex8')
+        verde.style.display = 'none'
+    }, 2000);
+    plato.textContent = 'Tarta de galleta' 
+    arroz.appendChild(precio)
+    arroz.appendChild(hr)
+}
+function queso (){
+    comprobar += 1
+    total += 5.5
+    let div = document.getElementById('nonex')
+    let arroz = document.createElement('div')
+    let precio = document.createElement('div')
+    let preciox = document.createElement('h3')
+    let verde = document.getElementById('verdex9')
+    verde.style.display = 'block'
+    preciox.textContent = "5,5€"
+    precio.appendChild(preciox)
+    precio.style.border = "none"
+    precio.style.display = 'flex'
+    precio.style.justifyContent = 'right'
+    preciox.style.marginRight = '1rem'
+    precio.style.marginTop = '0px'
+    precio.style.marginBottom = '0px'
+    preciox.style.color = '#ffd10b'
+    preciox.style.fontWeight = '500'
+    let plato = document.createElement('h3')
+    let img = document.createElement('img')
+    let hr = document.createElement('hr')
+    img.setAttribute('src', "/img/postre/queso.png")
+    arroz.appendChild(plato)
+    arroz.appendChild(img)
+    div.appendChild(arroz)
+    console.log(div)
+    setTimeout(function() {
+        let verde = document.getElementById('verdex9')
+        verde.style.display = 'none'
+    }, 2000);
+    plato.textContent = 'Tarta de queso' 
+    arroz.appendChild(precio)
+    arroz.appendChild(hr)
+}
+function raton (){
+    if (comprobar == 0){
+        let div = document.getElementById('nonex')
+        let adios = document.createElement('div')
+        let preciox = document.createElement('h3')
+        preciox.textContent = "Todavia no se ha añadido nada"
+        adios.appendChild(preciox)
+        div.appendChild(adios)
+        adios.setAttribute('id', 'adios')
+    } if (comprobar > 0){
+        let div = document.getElementById('nonex')
+        let prueba = document.createElement('div')
+        let adios = document.getElementById('adios')
+        let ponerboton = document.getElementById('precio')
+        if (adios){
+            adios.style.display = 'none'
+        }
+        if (ponerboton){
+            console.log('a')
+        }else{
+            let a = document.createElement('a')
+            a.setAttribute('href', '/confirmar')
+            let boton = document.createElement('button')
+            boton.setAttribute('id', 'precio')
+            boton.setAttribute('onclick', 'pedir()')
+            boton.textContent = 'Confirmar pedido ' + total + '€'
+            a.appendChild(boton)
+            prueba.appendChild(a)
+            div.appendChild(prueba)
+            let miVariable = total
+            localStorage.setItem("dostotal", miVariable);
+        }
+    }
+}
+function funcion(){
+    let total = localStorage.getItem("dostotal");
+    let envio = localStorage.getItem("variable");
+    let importe = document.getElementById('importe')
+    importe.textContent = 'Importe de ' + total + '€'
+    console.log(recoger)
+    let recogida = document.getElementById('recogida')
+    let casa = document.getElementById('domicilio')
+    console.log(recogida)
+    if (envio){
+        casa.style.display = 'flex'
+        recogida.style.display = 'none'
+
+    }else{
+        recogida.style.display = 'flex'
+        casa.style.display = 'none'
+    }
 }

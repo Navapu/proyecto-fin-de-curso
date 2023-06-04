@@ -78,4 +78,11 @@ router.get('/pide', (req, res) => {
         res.render('pide.hbs')
     }
 })
+router.get('/confirmar', (req, res) => {
+    if(req.session.loggedin == true){
+        res.render('confirmar.hbs', {name: req.session.name})
+    }else{
+        res.render('confirmar.hbs')
+    }
+})
 module.exports = router
